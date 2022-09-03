@@ -84,7 +84,8 @@ const SubmitForm = () => {
         
       </Form.Item>
 
-      <Button style={{fontSize: 30,  fontWeight: 'Times New Roman'}} type="primary" htmlType="submit">
+      <Button style={{fontSize: 30,  fontWeight: 'Times New Roman'}} type="primary" htmlType="submit"
+      onClick={() => {setTimeout(function(){window.location.reload()},1000);}}>
           Submit!
         </Button>
     </Form>
