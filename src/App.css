@@ -1,0 +1,26 @@
+@import '~antd/dist/antd.css';
+header {
+  height: 12%;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+}
+
+.web-title {
+  margin: 0 auto;
+  user-select: none;
+  color: white;
+  font-size: 24px;
+  font-family: "Consolas", cursive;
+}
+
+.content {
+  min-height: 80vh;
+  width: 80%;
+  margin: auto;
+}

@@ -43,7 +43,7 @@ const SubmitForm = () => {
 
 
   return (
-    <Form name="basic" labelCol={{span: 8,}} wrapperCol={{span: 16, }} initialValues={{remember: true,}} onFinish={onFinish}
+    <Form name="basic" labelCol={{span: 0,}} wrapperCol={{span: 16, }} initialValues={{remember: true,}} onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
       form = {form}>
@@ -58,7 +58,7 @@ const SubmitForm = () => {
           },
         ]}
       >
-        <InputNumber style={{width: 350, height: 100}}/>
+        <InputNumber style={{width: 350}}/>
       </Form.Item>
 
       <Form.Item name="content"
@@ -70,13 +70,12 @@ const SubmitForm = () => {
 
       <Form.Item
         wrapperCol={{
-          offset: 8,
           span: 16,
         }}
       >
 
-        <Form.Item valuePropName="fileList" name="avatar" getValueFromEvent={e => e.fileList} >
-          <Upload  maxCount = {1} listType="picture-card" beforeUpload={() => false} >
+        <Form.Item valuePropName="fileList" name="avatar" getValueFromEvent={e => e.fileList} labelAlign="left">
+          <Upload  maxCount = {1} beforeUpload={() => false} >
             <Button style={{fontSize: 20,  fontWeight: 'Times New Roman'}}>Upload Avatar here...</Button>
           </Upload>
         </Form.Item>
@@ -84,10 +83,12 @@ const SubmitForm = () => {
         
       </Form.Item>
 
+      <Form.Item labelAlign="left">
       <Button style={{fontSize: 30,  fontWeight: 'Times New Roman'}} type="primary" htmlType="submit"
       onClick={() => {setTimeout(function(){window.location.reload()},1000);}}>
           Submit!
         </Button>
+       </Form.Item>
     </Form>
   );
 };
